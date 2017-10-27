@@ -1,0 +1,320 @@
+/*
+Theme Name: eilery.com
+Theme URI: http://www.eilery.com/wp-content/themes/eilery.com/
+Version: 1.00
+Author: Eilery
+Author URL: http://www.eilery.com/
+License: © 2017 Eilery All Rights Reserved.
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+@charset "UTF-8";
+@font-face {
+  font-family: "Eilerica";
+  src: url("./font/Eilerica.eot");
+  src: url("./font/Eilerica.eot?#iefix") format("embedded-opentype"),
+       url("./font/Eilerica.woff") format("woff"),
+       url("./font/Eilerica.ttf") format("truetype"),
+       url("./font/Eilerica.svg#fontset") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*
+normalize
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+/*
+default
+*/
+
+html {
+  background: transparent;
+  color: #3f00ff;
+
+  font-family: "Eilerica", "ＭＳ Ｐゴシック", "MS PGothic", "Droid Sans", "Osaka", sans-serif;
+  font-size: 62.5%;
+  font-weight: normal;
+  -webkit-text-size-adjust: 100.0%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+body {
+  font-size: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+	margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  background: #3f00ff;
+}
+
+
+
+/*
+header
+*/
+
+header {
+  position: fixed;
+  top: 0.4rem;
+  left: 96.0vw;
+  word-wrap: normal;
+  white-space: normal;
+
+  height: 5.0rem;
+
+  overflow: hidden;
+
+  max-width: calc(100.0vh - 1.0rem);
+
+  transform-origin: left top;
+  transform: rotate(90.0deg);
+
+  z-index: 99;
+}
+
+header h1 {
+  font-size: 5.0rem;
+  line-height: 4.0rem;
+
+  white-space: nowrap;
+}
+
+
+/*
+main
+*/
+
+main {
+  position: absolute;
+  top : 2.0vw;
+  left: 6.0vw;
+  right: 6.0vw;
+}
+
+main h1, main p, main address, main ul {
+  width: calc(100.0% - 4.0rem - 4.0vw);
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  padding: 0 calc(2.0vw + 4.0rem) 0 2.0vw;
+  font-style: normal;
+}
+
+main h1 {
+  font-size: 1.4rem;
+}
+
+main p, main address {
+  margin-bottom: 2.4rem;
+}
+
+main li {
+  display: inline;
+}
+
+main li:after {
+  content: ", ";
+}
+
+main li:last-child:after {
+  content: "";
+}
+
+main ul:after {
+  content: "\A–";
+  white-space: pre;
+}
+
+main p.img {
+  width: calc(100.0% - 4.0vw);
+  padding-right: 2.0vw;
+}
+
+main h1:last-child, main p:last-child {
+  margin-bottom: 2.0vw;
+}
+
+main a {
+  border-bottom: 1px solid #3f00ff;
+}
+
+main img {
+  max-width: 100.0%;
+  max-height: calc(100.0vh - 4.0vw);
+
+  margin-bottom: 2.0vw;
+}
+
+main img:last-child {
+  margin-bottom: 0;
+}
+
+#column {
+  width: calc(100.0% / 2.0 - 0.1vw);
+}
+
+.item {
+  width: calc(100.0% / 2.0 - 4.2vw);
+  margin: 0 2.0vw 2.0vw 2.0vw;
+}
+
+.item.x2 {
+  width: calc(100.0% / 1.0 - 4.3vw);
+}
+
+@media screen and (min-width: 600px) {
+  #column {
+    width: calc(100.0% / 3.0 - 0.1vw);
+  }
+
+  .item {
+    width: calc(100.0% / 3.0 - 4.2vw);
+  }
+
+  .item.x2 {
+    width: calc(100.0% / 1.5 - 4.3vw);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #column {
+    width: calc(100.0% / 4.0 - 0.1vw);
+  }
+
+  .item {
+    width: calc(100.0% / 4.0 - 4.2vw);
+  }
+
+  .item.x2 {
+    width: calc(100.0% / 2.0 - 4.3vw);
+  }
+}
+
+.item h1, .item p {
+  display: none;
+}
+
+.item img {
+  width: 100.0%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+
+  margin-bottom: auto;
+}
+
+
+/*
+nav
+*/
+
+nav {
+  position: fixed;
+  bottom: 2.4rem;
+  left: 4.0vw;
+
+  max-width: 92.0vw;
+
+  z-index: 99;
+  overflow: hidden;
+}
+
+nav ul {
+  white-space: nowrap;
+}
+
+nav li {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+nav a {
+  border-bottom: 2px solid #3f00ff;
+}
+
+
+/*
+footer
+*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 4.0vw;
+
+  max-width: 92.0vw;
+
+  z-index: 99;
+  overflow: hidden;
+}
+
+footer p {
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+}
+
+
+/*
+etc.
+*/
+
+.hidden {
+  display: none;
+}
+
+#canvas {
+  display: block;
+  left: 0;
+  right: 100.0%;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 999;
+  background: #3f00ff;
+}
